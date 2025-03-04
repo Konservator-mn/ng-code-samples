@@ -1,0 +1,32 @@
+:host {
+  display: inline-block;
+}
+
+.string-typer {
+  &_text {
+    text-wrap: wrap;
+    vertical-align: top;
+  }
+
+  &_blinking-cursor {
+    display: inline-block;
+    border: unset;
+    background: #5a5a5a;
+    width: 2px;
+    margin-left: 1px;
+    animation: Cursor-blink 1s infinite;
+    transform: scaleY(110%) translateY(10%);
+  }
+}
+
+@keyframes Cursor-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
